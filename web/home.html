@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<title>Drink</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Drink</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#experiences" class="w3-bar-item w3-button">Experiences</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="assets/d1.jpeg" alt="D1" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Drink</b></span> </h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Experience Section -->
+  <div class="w3-container w3-padding-32" id="experiences">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Experiences</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding" >Foundations</div>
+        <img src="assets/whiskey.jpeg" alt="House" style="width:100%">
+        <ul class=" w3-padding">
+          <li>Learn the history and techniques behind the 6 foundational drinks</li>
+          <li>Discover techniques to make nearly any cocktail</li>
+          <li>Explore delicious variants (customized to your palette)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Tour of the Carribean</div>
+        <img src="assets/beach3.jpeg" alt="House" style="width:100%">
+        <ul class=" w3-padding">
+          <li>Explore iconic and lesser known drinks from the islands of the Caribbean </li>
+          <li>Learn the rich history of the region through its iconic drinks </li>
+          <li>Learn perfect drinks for a summer party </li>
+          <li>Master the different kinds of Rum </li>
+          <li>Elevate drinks with versatile modifiers (customized to your palette) </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">The Scientist</div>
+        <img src="assets/molecular2.jpeg" alt="House" style="width:100%">
+        <ul class=" w3-padding">
+          <li>Explore the high brow world of drinks and learn delicious combinations to impress even experienced bartenders</li>
+          <li>Learn techniques and versatile mixes to level up any cocktails</li>
+          <li>Learn to invent your own drink</li>
+          <li>Flavor bubbles, clarified cocktails, and more!</li>
+        </ul>
+      </div>
+    </div>
+   
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Drink lets you experience and learn about the world of cocktails from the comfort of your home at a reasonable price.
+    </p>
+  </div>
+
+  <!-- <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+      <h3>John Doe</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+      <h3>Jane Doe</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+      <h3>Mike Ross</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+      <h3>Dan Star</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div> -->
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Want to know more? Reach out to the team.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Beta Interest</h4>
+          </div>
+          <div class="modal-body">
+            <p>We're still setting things up, but if you're interested please sign up for our beta release!</p>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" class="form-control" id="name" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="price">How much would you want to see a shipment that makes 4 drinks cost?</label>
+                <div class="col-sm-11">
+                 <input type="range" class="form-range" min="50" max="200" value="100" id="price" oninput="DRINK.updateSlider(value)">
+                </div>
+                <div class="col-sm-1">
+                 <output for="price" id="price_label">$100</output>
+               </div>
+              </div>
+              <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <input type="text" class="form-control" id="feedback" placeholder="Tell us more about what you want to see!">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check">
+                <label class="form-check-label" for="check">I will definetely buy this!</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="DRINK.submitInterest()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Image of location/map -->
+<div class="w3-container">
+  <img src="assets/d3.jpeg" class="w3-image" style="width:100%">
+</div>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>
