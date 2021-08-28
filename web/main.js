@@ -31,10 +31,7 @@ DRINK.submitInterest = function(){
             
         },
         'json'
-    ).done((res) => {
-	    alert( "second success" );
-	    console.log(res)
-	  })
+    )
 
 }
 

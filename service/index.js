@@ -16,7 +16,7 @@ app.post('/interest', (req, res) => {
 	console.log(req.body)
 	const { name, email, price, feedback, checkbox } = req.body
 	console.log(name)
-	res.status(200).send('Interest Received.')
+	res.status(200).json('Interest Received.')
 
 })
 
