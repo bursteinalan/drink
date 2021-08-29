@@ -28,6 +28,6 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, '../web')))
 
-app.listen(8011, () => {
-    console.log(`App running on port 8011.`)
+app.listen(process.env.PORT || 8011, () => {
+    console.log(`App running on port `,process.env.PORT || 8011)
 })

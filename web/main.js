@@ -23,7 +23,7 @@ DRINK.submitInterest = function(){
 	}
 
 	$.post(
-        req_path + '/interest',
+        '/interest',
         data,
         (response) => {
             console.log('Finished')
