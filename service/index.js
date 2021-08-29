@@ -3,6 +3,7 @@ const path = require('path')
 const cors = require('cors');
 
 const app = express()
+const db = require('./db-manager')
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -12,18 +13,31 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../web/home.html'));
 })
 
-app.post('/interest', (req, res) => {
+app.post('/interest', async (req, res) => {
 	console.log(req.body)
 	const { name, email, price, feedback, checkbox } = req.body
 	console.log(name)
-	res.status(200).json('Interest Received.')
+	const data = req.body
+	const dbRes = await db.saveData(email, data)
+
+	res.status(200).json('Interest Received:'+dbRes)
+
+})
+
+app.get('/dump', async (req, res) => {
+
+	const keys = await db.getAll()
+	console.log(keys)
+	// console.log(values)
+
+	res.status(200).json('Dump Received:'+keys)
 
 })
 
 // app.use(cors())
 
 app.use(cors({
-    origin: ['http://localhost']
+    origin: '*'//['http://localhost']
 }))
 
 app.use(express.static(path.join(__dirname, '../web')))
