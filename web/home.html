@@ -4,13 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css"> -->
 <link rel="icon" href="assets/favicon.png" type="image/x-icon"/>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script> -->
 <script type="text/javascript" src="main.js"></script>
+<style type="text/css">
+  .img-size{
+/*  padding: 0;
+  margin: 0; */
+  height: 450px;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+.carousel_modal{
+    padding: 0;
+}
+</style>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -43,10 +57,10 @@
   </div>
 
   <div class="w3-row-padding">
-    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+    <div class="w3-col l4 m6 w3-margin-bottom" data-bs-toggle="modal" data-bs-target="#foundations_modal">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding" >Foundations</div>
-        <img src="assets/whiskey.jpeg" alt="House" style="width:100%">
+        <img src="assets/whiskey.jpeg" alt="Foundations" style="width:100%">
         <ul class=" w3-padding">
           <li>Learn the history and techniques behind the 6 foundational drinks</li>
           <li>Discover techniques to make nearly any cocktail</li>
@@ -54,10 +68,10 @@
         </ul>
       </div>
     </div>
-    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+    <div class="w3-col l4 m6 w3-margin-bottom" data-bs-toggle="modal" data-bs-target="#caribbean_modal">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">Tour of the Carribean</div>
-        <img src="assets/beach3.jpeg" alt="House" style="width:100%">
+        <div class="w3-display-topleft w3-black w3-padding">Tour of the Caribbean</div>
+        <img src="assets/beach3.jpeg" alt="Caribbean" style="width:100%">
         <ul class=" w3-padding">
           <li>Explore iconic and lesser known drinks from the islands of the Caribbean </li>
           <li>Learn the rich history of the region through its iconic drinks </li>
@@ -68,10 +82,10 @@
         </ul>
       </div>
     </div>
-    <div class="w3-col l4 m6 w3-margin-bottom" data-toggle="modal" data-target="#myModal">
+    <div class="w3-col l4 m6 w3-margin-bottom" data-bs-toggle="modal" data-bs-target="#scientist_modal">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">The Scientist</div>
-        <img src="assets/molecular2.jpeg" alt="House" style="width:100%">
+        <img src="assets/molecular2.jpeg" alt="Scientist" style="width:100%">
         <ul class=" w3-padding">
           <li>Explore the high brow world of drinks and learn delicious combinations to impress even experienced bartenders</li>
           <li>Learn techniques and versatile mixes to level up any cocktails</li>
@@ -136,12 +150,143 @@
     </form>
   </div>
 
+
+  <div class="modal fade" id="foundations_modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Foundations</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body carousel_modal">
+            <!-- <p>We're still setting things up, but if you're interested please sign up for our beta release!</p>  -->
+            <div id="foundations_carousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#foundations_carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#foundations_carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#foundations_carousel" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block img-size" src="assets/of1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/m1.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/s1.jpeg" alt="Third slide">
+                </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#foundations_carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#foundations_carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="modal fade" id="caribbean_modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Tour of the Caribbean</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body carousel_modal">
+            <!-- <p>We're still setting things up, but if you're interested please sign up for our beta release!</p>  -->
+            <div id="caribbean_carousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#caribbean_carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#caribbean_carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#caribbean_carousel" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block img-size" src="assets/moj1.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/bahama1.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/pain1.jpeg" alt="Third slide">
+                </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#caribbean_carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#caribbean_carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="scientist_modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">The Scientist</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body carousel_modal">
+            <!-- <p>We're still setting things up, but if you're interested please sign up for our beta release!</p>  -->
+            <div id="scientist_carousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-bs-target="#scientist_carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#scientist_carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#scientist_carousel" data-bs-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block img-size" src="assets/mojito2.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/clarrified1.jpeg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-size" src="assets/layered1.jpeg" alt="Third slide">
+                </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#scientist_carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#scientist_carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal">Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Beta Interest</h4>
+            <button type="button" class="btn-close" data-dismiss="modal"></button>
           </div>
           <div class="modal-body">
             <p>We're still setting things up, but if you're interested please sign up for our beta release!</p>

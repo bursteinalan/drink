@@ -17,17 +17,17 @@ app.post('/interest', async (req, res) => {
 	console.log(req.body)
 	const { name, email, price, feedback, checkbox } = req.body
 	console.log(name)
-	const data = req.body
+	const data = { name, email, price, feedback, checkbox }
 	const dbRes = await db.saveData(email, data)
 
 	res.status(200).json('Interest Received:'+dbRes)
 
 })
 
-app.get('/dump', async (req, res) => {
+app.post('/alldata', async (req, res) => {
 
 	const keys = await db.getAll()
-	console.log(keys)
+	console.log(results)
 	// console.log(values)
 
 	res.status(200).json('Dump Received:'+keys)

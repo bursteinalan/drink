@@ -1,11 +1,11 @@
 var DRINK = {}
 const req_path = 'http://localhost:8011'
 
-DRINK.documentReady = function(){
+DRINK.documentReady = () => {
 	console.log('Drink is ready!')
 }
 
-DRINK.submitInterest = function(){
+DRINK.submitInterest = () => {
 	console.log("Submitting Interest Form!")
 	const name = document.querySelector('#name').value
 	const email = document.querySelector('#email').value
@@ -35,6 +35,21 @@ DRINK.submitInterest = function(){
 
 }
 
-DRINK.updateSlider = function(val) {
+DRINK.updateSlider = (val) => {
 	document.querySelector('#price_label').value = "$"+val;
 }
+
+DRINK.grabData = () => {
+	$.post(
+		'/alldata',
+		(response) => {
+			console.log(response)
+		},
+		'json'
+	)
+}
+
+DRINK.grabOrders = () => {
+	
+}
+
